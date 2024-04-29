@@ -1,0 +1,43 @@
+{%extends "base.html"%}
+{%block main_content%}
+        <a href="{{url_for('game')}}">PLAY</a>
+        <br/><br/>
+
+        <p>Vampire Cuties is a <b>time, wave-based game</b> where <b>you are the bullet hell.</b> </p>
+        <p>In this game you will play the hero, who faces an "endless" amounts of waves of enemies
+            with weapons that you will gain and strengthen by defeating said enemies. The game has a 
+            <b>set runtime of 5-minutes</b>, after that the game will automatically end.
+            Try to defeat as many enemies in that time range! 
+        </p>
+        <p>Features:</p>
+        <ul>
+            <li>Automated attacking</li>
+            <li>Multiple weapons that each act in their own way! Start with one random weapon, level up to randomly gain the rest! 
+                <ul>
+                    <li>Ring of Onion - Damages enemies that are in range over time</li>
+                    <li>Dagger Throw - Throws low damage daggers horizontally across the screen</li>
+                    <li>Fire Gauntlet - High damage short range attack in the faced direction</li>
+                    <li>Axe Spree - Throws three axes in a random direction dealing high damage</li>
+                </ul>
+            </li>
+            <li>Arcade-like gameplay loop (5 minute runtime)</li>
+            <li>Level-up system - weapon and enemy power scaling</li>
+            <li>"Endless map" scroll effect</li>
+        </ul>
+
+        <h2>Leaderboards:</h2>
+        <section class="scores">
+            <table>
+                <tr>
+                    <th scope="col">Player</th>
+                    <th scope="col">Defeated</th>
+                </tr>
+                {%for entry in leaderboard%}
+                    <tr>
+                        <td>{{entry['player_id']}}</td>
+                        <td>{{entry['score']}}</td>
+                    </tr>
+                {%endfor%}
+            </table>
+        </section>
+{%endblock%}

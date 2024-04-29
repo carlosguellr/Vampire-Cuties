@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>VAMPIRE CUTIES</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"/>
+        <script src="{{url_for('static', filename='main.js')}}" type="module"></script>
+        <!-- Ajax -->
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <a href="{{url_for('index')}}"><h1>VAMPIRE CUTIES</h1></a>
+        {% block main_content %}
+    {% endblock %}
+    </body>

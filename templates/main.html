@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+{%block main_content%}
+        <section class="data">
+            <p id="level">Level:</p>
+            <h2 class="time">Elapsed:</h2>
+            <p id="defeated">Defeated:</p>
+        </section>
+        <canvas width="640" height="320"></canvas> 
+        <p id="outcome"></p>
+        <section class="results">
+            <p>vvv Type your username below to enter the leaderboard vvv </p>
+            <form action="" method="post" novalidate>
+                {{form.hidden_tag()}}
+    
+                {{form.player_id.label}}
+                {{form.player_id()}}
+                {%for error in form.player_id.errors%}
+                    {{error}}
+                {%endfor%}
+                <br/>
+                <label for="defeatedField">Defeated:</label>
+                <input type="number" id="defeatedField" name="defeatedField" readonly>
+                <br/>
+                {{form.submit()}}
+            </form>
+        </section>
+        
+{%endblock%}

@@ -1,0 +1,51 @@
+canvas{
+    background-color: black;
+    display: block;
+    margin:1em auto 1em auto;
+    image-rendering: pixelated;
+    border:1px white ridge;
+}
+
+h2{text-align: center;margin:0em;}
+
+
+/* h1{text-align: center; font-family: "Cormorant", serif;
+    color: #EB841B;
+    text-shadow: 3px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;} */
+h1{text-align: center; font-family: "Cormorant", serif;
+    background-image: linear-gradient(#eb841b, #EDAB23, #eb841b);
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    background-size: 100%;
+    background-repeat: repeat;
+    
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size:230%;
+}
+
+html{ background-image: linear-gradient(#3A0708,#220000); color:white; height:100%; font-family: "arial";}
+body{text-align: center;}
+p{ width:50%;margin:0em auto 1em auto; text-align: center;}
+
+body>ul{display: inline-block;
+    text-align: left;}
+li{margin-bottom:1em;}
+a{background-color: red; color:white;width:120%; text-decoration: none;}
+
+#level, #defeated{font-size:70%; margin:1em auto 0em auto}
+.data{display:flex}
+.results{display:none}
+#outcome{color:#EDAB23}
+
+.scores{margin:1em}
+table{border-collapse: collapse; text-align: center; margin-left: auto; margin-right: auto; width:30%}
+td, th{border:1px solid}
+th{background-color: black;}
+tr:nth-child(even){background-color: #380607;}
+tr:hover{background-color: #560e0f;}
